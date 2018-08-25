@@ -5,21 +5,13 @@
   <p>Welcome to <%= title %></p>
 
   <div class="article-grid">
-    <div class="article">
-      <img src='https://via.placeholder.com/200x200' />
-      <p class="title">Title</p>
-      <p class="description"></p>
-    </div>
-    <div class="article">
-      <img src='https://via.placeholder.com/200x200' />
-      <p class="title">Title</p>
-      <p class="description"></p>
-    </div>
-    <div class="article">
-      <img src='https://via.placeholder.com/200x200' />
-      <p class="title">Title</p>
-      <p class="description"></p>
-    </div>
+    <% for(let article of data) { %>
+      <div class="article">
+        <img src='<%= article.img %>' />
+        <p class="title"><%= article.title %></p>
+        <p class="description"><%= article.description %></p>
+      </div>
+    <% } %>
   </div>
 </main>
 

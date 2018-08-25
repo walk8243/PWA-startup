@@ -4,7 +4,25 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: config.app.title });
+  var data = [
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
+  ];
+
+  res.render('index', { title: config.app.title, data: data });
 });
 
 module.exports = router;
