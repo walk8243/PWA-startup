@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
     },
   ];
 
-  res.render('index', { title: config.app.title, data: data });
+  res.render('index', { app: config.app, data: data });
 });
 
 module.exports = router;
