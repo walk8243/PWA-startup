@@ -1,0 +1,60 @@
+// カスタムするScssのベースファイル
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #eeeeee;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  grid-row: 1 / 2;
+  background: #fefefe;
+}
+main {
+  grid-row: 2 / -2;
+  padding: 0 15px;
+}
+footer {
+  grid-row: -2 / -1;
+  background: #fefefe;
+  .copyright {
+    text-align: center;
+  }
+}
+
+.article {
+  position: relative;
+  padding-bottom: 10px;
+  background: #fbf9f9;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  @include hover-underline;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px 15px;
+  }
+
+  p {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
