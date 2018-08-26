@@ -44,12 +44,24 @@ header {
 }
 main {
   grid-row: 2 / -2;
-  padding: 0 15px;
+  padding: 0 15px 20px;
 }
 footer {
   grid-row: -2 / -1;
+  padding: 20px 15px 5px;
   background: #fefefe;
+
+  .site-map {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+
+    ul {
+      list-style: none;
+    }
+  }
   .copyright {
+    font-size: $font-size-sm;
     text-align: center;
   }
 }
