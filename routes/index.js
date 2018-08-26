@@ -35,6 +35,21 @@ router.get('/', function(req, res, next) {
       title: 'title',
       description: ''
     },
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
+    {
+      img: 'https://via.placeholder.com/200x100',
+      title: 'title',
+      description: ''
+    },
   ];
 
   res.render('index', { app: config.app, data: data });
